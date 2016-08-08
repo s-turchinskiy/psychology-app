@@ -1,8 +1,8 @@
-﻿<Window x:Class="ForAliceWpfApplication.PreliminaryResultWindow"
+﻿<Page x:Class="ForAliceWpfApplication.PreliminaryResultWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Игра" Height="600" Width="825" ScrollViewer.HorizontalScrollBarVisibility="Visible" ScrollViewer.VerticalScrollBarVisibility="Disabled">
-    <Window.Resources>
+    <Page.Resources>
         <LinearGradientBrush x:Key="ProgressBarBackground" EndPoint="1,0" StartPoint="0,0">
             <GradientStop Color="#BABABA" Offset="0"/>
             <GradientStop Color="#C7C7C7" Offset="0.5"/>
@@ -117,7 +117,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-    </Window.Resources>
+    </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="21*"/>
@@ -143,4 +143,4 @@
                     HorizontalAlignment="Right" Click="ButtonOnward_Click" Padding="25,5" FontWeight="Bold"
                     Background="#95b3d7" BorderBrush="#93cddd" Margin="0"/>
     </Grid>
-</Window>
+</Page>

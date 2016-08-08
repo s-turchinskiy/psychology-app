@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\s.turchinskiy\Documents\Visual Studio 2013\Projects\ForAliceWpfApplication\ForAliceWpfApplication\obj\Debug\
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\
 ForAliceWpfApplication
 none
 false
 DEBUG;TRACE
-C:\Users\s.turchinskiy\Documents\Visual Studio 2013\Projects\ForAliceWpfApplication\ForAliceWpfApplication\App.xaml
-92099077607
+C:\job\projects\psychology-app\ForAliceWpfApplication\App.xaml
+10-1044341564
 
-1393551343
+141004411020
 131478842535
-FocusModificationDescriptionWindow.xaml;FocusModificationWindow.xaml;IDataFillingWindow.xaml;IDescriptionWindow.xaml;IWindow.xaml;PreliminaryResultWindow.xaml;Window1.xaml;WordsSearchDescriptionWindow.xaml;WordsSearchWindow.xaml;
+FocusModificationDescriptionWindow.xaml;FocusModificationWindow.xaml;IDataFillingWindow.xaml;IDescriptionWindow.xaml;IWindow.xaml;MainWindow.xaml;PreliminaryResultWindow.xaml;Window1.xaml;WordsSearchDescriptionWindow.xaml;WordsSearchWindow.xaml;
 
 False
 

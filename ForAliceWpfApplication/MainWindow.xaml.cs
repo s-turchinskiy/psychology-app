@@ -15,20 +15,13 @@ using System.Windows.Shapes;
 namespace ForAliceWpfApplication
 {
     /// <summary>
-    /// Interaction logic for WordsSearchDescriptionWindow.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class WordsSearchDescriptionWindow : Page
+    public partial class MainWindow : Window
     {
-        public WordsSearchDescriptionWindow()
+        public MainWindow()
         {
             InitializeComponent();
         }
-
-        private void ButtonOnward_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow _mainWindow = (MainWindow)Window.GetWindow(this);
-            _mainWindow.Frame.Navigate(new WordsSearchWindow());
-           
-        } 
     }
 }

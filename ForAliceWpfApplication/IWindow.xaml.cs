@@ -17,7 +17,7 @@ namespace ForAliceWpfApplication
     /// <summary>
     /// Interaction logic for IWindow.xaml
     /// </summary>
-    public partial class IWindow : Window
+    public partial class IWindow : Page
     {
         public IWindow()
         {

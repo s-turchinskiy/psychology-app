@@ -17,7 +17,7 @@ namespace ForAliceWpfApplication
     /// <summary>
     /// Interaction logic for IDescriptionWindow.xaml
     /// </summary>
-    public partial class IDescriptionWindow : Window
+    public partial class IDescriptionWindow : Page
     {
         public IDescriptionWindow()
         {
@@ -26,14 +26,8 @@ namespace ForAliceWpfApplication
 
         private void ButtonOnward_Click(object sender, RoutedEventArgs e)
         {
-            IDataFillingWindow w1 = new IDataFillingWindow();
-            w1.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
-            w1.Top = this.Top;
-            w1.Left = this.Left;
-            w1.Height = this.Height;
-            w1.Width = this.Width;
-            w1.Show();
-            this.Close();
+            MainWindow _mainWindow = (MainWindow)Window.GetWindow(this);
+            _mainWindow.Frame.Navigate(new IDataFillingWindow());
         } 
     }
 }

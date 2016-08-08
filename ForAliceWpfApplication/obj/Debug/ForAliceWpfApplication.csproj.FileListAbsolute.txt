@@ -26,3 +26,34 @@ C:\Users\s.turchinskiy\Documents\Visual Studio 2013\Projects\ForAliceWpfApplicat
 C:\Users\s.turchinskiy\Documents\Visual Studio 2013\Projects\ForAliceWpfApplication\ForAliceWpfApplication\bin\Debug\ForAliceWpfApplication.pdb
 C:\Users\s.turchinskiy\Documents\Visual Studio 2013\Projects\ForAliceWpfApplication\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.exe
 C:\Users\s.turchinskiy\Documents\Visual Studio 2013\Projects\ForAliceWpfApplication\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.pdb
+C:\job\projects\psychology-app\ForAliceWpfApplication\bin\Debug\ForAliceWpfApplication.exe.config
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.exe
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.pdb
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.csprojResolveAssemblyReference.cache
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\FocusModificationDescriptionWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\FocusModificationWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\IDataFillingWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\IDescriptionWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\IWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\MainWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\PreliminaryResultWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\Window1.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\WordsSearchDescriptionWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\WordsSearchWindow.baml
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\FocusModificationDescriptionWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\FocusModificationWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\IDataFillingWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\IDescriptionWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\IWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\MainWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\PreliminaryResultWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\Window1.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\WordsSearchDescriptionWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\WordsSearchWindow.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\App.g.cs
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication_MarkupCompile.cache
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.g.resources
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.Properties.Resources.resources
+C:\job\projects\psychology-app\ForAliceWpfApplication\obj\Debug\ForAliceWpfApplication.csproj.GenerateResource.Cache
+C:\job\projects\psychology-app\ForAliceWpfApplication\bin\Debug\ForAliceWpfApplication.exe
+C:\job\projects\psychology-app\ForAliceWpfApplication\bin\Debug\ForAliceWpfApplication.pdb

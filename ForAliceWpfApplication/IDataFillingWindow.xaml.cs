@@ -17,7 +17,7 @@ namespace ForAliceWpfApplication
     /// <summary>
     /// Interaction logic for IDataFillingWindow.xaml
     /// </summary>
-    public partial class IDataFillingWindow : Window
+    public partial class IDataFillingWindow : Page
     {
         public IDataFillingWindow()
         {

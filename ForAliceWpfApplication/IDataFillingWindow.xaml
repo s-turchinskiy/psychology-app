@@ -1,4 +1,4 @@
-﻿<Window x:Class="ForAliceWpfApplication.IDataFillingWindow"
+﻿<Page x:Class="ForAliceWpfApplication.IDataFillingWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Игра" Height="600" Width="825">
@@ -26,4 +26,4 @@
         </Grid>
 
     </Grid>
-</Window>
+</Page>

@@ -17,7 +17,7 @@ namespace ForAliceWpfApplication
     /// <summary>
     /// Interaction logic for WordsSearchWindow.xaml
     /// </summary>
-    public partial class WordsSearchWindow : Window
+    public partial class WordsSearchWindow : Page
     {
         public WordsSearchWindow()
         {
@@ -29,13 +29,8 @@ namespace ForAliceWpfApplication
             PreliminaryResultWindow w1 = new PreliminaryResultWindow();
             w1.Percent = 100 / 10;
             w1.NextWindow = "IDescriptionWindow";
-            w1.WindowStartupLocation = System.Windows.WindowStartupLocation.Manual;
-            w1.Top = this.Top;
-            w1.Left = this.Left;
-            w1.Height = this.Height;
-            w1.Width = this.Width;
-            w1.Show();
-            this.Close();
+            MainWindow _mainWindow = (MainWindow)Window.GetWindow(this);
+            _mainWindow.Frame.Navigate(w1);
         } 
     }
 }

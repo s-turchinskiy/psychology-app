@@ -1,4 +1,4 @@
-﻿<Window x:Class="ForAliceWpfApplication.WordsSearchDescriptionWindow"
+﻿<Page x:Class="ForAliceWpfApplication.WordsSearchDescriptionWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Игра" Height="600" Width="825">
@@ -30,4 +30,4 @@
         </Grid>
 
     </Grid>
-</Window>
+</Page>
