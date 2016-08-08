@@ -1,0 +1,8 @@
+﻿<Window x:Class="ForAliceWpfApplication.IWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Игра" Height="600" Width="825">
+    <Grid Name="MainGrid" Margin="15,20">
+
+    </Grid>
+</Window>

@@ -1,0 +1,44 @@
+﻿<Window x:Class="ForAliceWpfApplication.FocusModificationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Игра" Height="600" Width="825" Loaded="Window_Loaded">
+    <Grid Name= "MainGrid" Margin="15,20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Button Name="ButtonImage1" Grid.Row="0" Grid.Column="0" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image1"/>
+        </Button>
+        <Button Name="ButtonImage2" Grid.Row="0" Grid.Column="1" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image2"/>
+        </Button>
+        <Button Name="ButtonImage3" Grid.Row="0" Grid.Column="2" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image3"/>
+        </Button>
+        <Button Name="ButtonImage4" Grid.Row="1" Grid.Column="0" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image4"/>
+        </Button>
+        <Button Name="ButtonImage5" Grid.Row="1" Grid.Column="1" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image5"/>
+        </Button>
+        <Button Name="ButtonImage6" Grid.Row="1" Grid.Column="2" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image6"/>
+        </Button>
+        <Button Name="ButtonImage7" Grid.Row="2" Grid.Column="0" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image7"/>
+        </Button>
+        <Button Name="ButtonImage8" Grid.Row="2" Grid.Column="1" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image8"/>
+        </Button>
+        <Button Name="ButtonImage9" Grid.Row="2" Grid.Column="2" Background="White" BorderBrush="White" Click="ButtonImage_Click">
+            <Image Name="Image9"/>
+        </Button>
+    </Grid>
+</Window>
