@@ -26,6 +26,9 @@ namespace ForAliceWpfApplication
 
         private void ButtonOnward_Click(object sender, RoutedEventArgs e)
         {
+            FeelWords mm = new FeelWords();
+            mm.DoWork();
+
             PreliminaryResultWindow w1 = new PreliminaryResultWindow();
             w1.Percent = 100 / 10;
             w1.NextWindow = "IDescriptionWindow";

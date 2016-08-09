@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="FeelWords.cs" />
     <Compile Include="FocusModificationWindow.xaml.cs">
       <DependentUpon>FocusModificationWindow.xaml</DependentUpon>
     </Compile>
@@ -183,6 +184,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Image9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImageTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImagePoint.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\ImagePrecent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
