@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ForAliceWpfApplication
 {
@@ -20,6 +22,7 @@ namespace ForAliceWpfApplication
     /// </summary>
     public partial class PreliminaryResultWindow : Page
     {
+        private DispatcherTimer tmrShow;
 
         private int _percent;
         public int Percent
@@ -42,8 +45,21 @@ namespace ForAliceWpfApplication
             DataContext = this;
         }
 
-        private void ButtonOnward_Click(object sender, RoutedEventArgs e)
+        private void Page_Loaded(object sender, RoutedEventArgs e)
         {
+            DispatcherTimer tmrShow = new DispatcherTimer();
+            tmrShow.Interval = new TimeSpan(0,0,1);
+            tmrShow.Tick += tmrShow_Tick; 
+            tmrShow.Start();
+
+        }
+
+        private void tmrShow_Tick(object sender, EventArgs e)
+        {
+
+                ((DispatcherTimer)sender).Stop();
+                //tmrShow = null;
+
             MainWindow _mainWindow = (MainWindow)Window.GetWindow(this);
             _mainWindow.Frame.NavigationService.Navigate(new Uri(NextWindow + ".xaml", UriKind.Relative));
         }

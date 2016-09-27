@@ -1,36 +1,65 @@
 ﻿<Page x:Class="ForAliceWpfApplication.FocusModificationDescriptionWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Игра" Height="600" Width="825">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="7*"/>
-        </Grid.RowDefinitions>
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+        Height="Auto" Width="Auto" Background="#c9e7eb">
+    <Grid Margin="30,30,30,30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
 
-        <TextBlock Grid.Row="0" FontSize="44" Text = "МОДИФИКАЦИЯ ВНИМАНИЯ" TextWrapping="Wrap" HorizontalAlignment="Center"/>
-        <Grid Grid.Row="1">
+        <Border Grid.Column="0" BorderThickness="5" BorderBrush="#FF5788C0" CornerRadius="65"></Border>
+        <Grid Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="2*"/>
+                <RowDefinition Height="5*"/>
                 <RowDefinition Height="2*"/>
-                <RowDefinition Height="2*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition Height="3*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock  Grid.Column="1" Grid.Row="0" FontSize="24" 
-                            Text="Найдите улыбающееся лицо среди других картинок. Старайтесь делать это как можно быстрее." TextWrapping="Wrap" />
-            <TextBlock  Grid.Column="1" Grid.Row="1" FontSize="18" TextWrapping="Wrap"
+            <Grid Grid.Row="0">
+                <TextBlock  FontSize="32" Text = "МОДИФИКАЦИЯ ВНИМАНИЯ"
+                       TextWrapping="Wrap" HorizontalAlignment="Center" Margin="35,15,35,0"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1.5*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock  Grid.Column="0" Grid.Row="0" FontSize="18" Text="Найдите улыбающееся лицо среди картинок" 
+                                TextWrapping="Wrap" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock  Grid.Column="1" Grid.Row="0" FontSize="18" Text="Чем быстрее, тем больше очков." 
+                                TextWrapping="Wrap" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <Image Grid.Column="0" Grid.Row="1" Source="Resources\FocusModificationDescription1.png" Margin="35,5,35,0"/>
+                <Image Grid.Column="1" Grid.Row="1" Source="Resources\FocusModificationDescription2.png" Margin="35,5,35,0"/>
+            </Grid>
+
+            <TextBlock  Grid.Row="2" FontSize="14" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="35,15,35,15"
                             Text="Модификация внимания поможет Вам повысить настроение и снизить стресс. Игра тренирует мозг автоматически фокусироваться на положительных аспектах жизни."/>
-            <TextBlock  Grid.Column="1" Grid.Row="2" FontSize="18" TextWrapping="Wrap"
-                            Text="Важно помнить, что наш мозг не видит отличий между игрой и реальностью, и благодаря этой особенности у нас появился метод, благодоря которому мы можем настроить наше бессознательное на более позитивный лад. Это может помочь человеку в осуществлении его целей и улучшении качества жизни."/>
-            <Button x:Name="ButtonOnward" Grid.Column="1" Grid.Row="3" Content="Далее" FontSize="18" VerticalAlignment="Top" 
-                    HorizontalAlignment="Right" Click="ButtonOnward_Click" Padding="25,5" FontWeight="Bold"
-                    Background="#95b3d7" BorderBrush="#93cddd" Margin="0"/>
+            <TextBlock  Grid.Row="3" FontSize="14" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="35,15,35,15"
+                            Text="Важно помнить, что наш мозг не видит отличий между игрой и реальностью, и благодаря этой особенности у нас появился метод, благодаря которому мы можем настроить наше бессознательное на более позитивный лад. Это может помочь человеку в осуществлении его целей и улучшении качества жизни."/>
         </Grid>
-        
+        <Button Grid.Column="1" Click="ButtonOnward_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Border x:Name="Border">
+                            <Border.Background>
+                                <RadialGradientBrush RadiusX="1" RadiusY="1">
+                                    <GradientStop Color="#c9e7eb" Offset="0"/>
+                                    <GradientStop Color="#c9e7eb" Offset="0.5"/>
+                                </RadialGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <Image Source="Resources\ImageForward.png" Margin="0,0,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>

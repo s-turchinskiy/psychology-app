@@ -21,31 +21,93 @@ namespace ForAliceWpfApplication
     public partial class FocusModificationWindow : Page
     {
         int amountOfAttemps = 0;
+        int amountWindow = 0;
+        int positiveImageNumberForm;
+        Button positiveButton;
 
         public FocusModificationWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Initialized(object sender, EventArgs e)
+
+        private int GetNumber(int maxSize)
         {
+            Random rnd = new Random();
+            return rnd.Next(1, maxSize);
+        }
 
+        private int[] GetNegativeNumbersImages() 
+        {
+            Random rnd = new Random();
+            int[] negativeNumbersImages = new int[8];
+            int currentNumber = 0;
+            int nextValue;
+            while (true)
+            {
+                nextValue = rnd.Next(1, 18);
+                while (true)
+                {
+                    if (negativeNumbersImages.Where(a => a == nextValue).Count() == 0)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        nextValue = nextValue + 1;
+                    }
+                }
 
+                negativeNumbersImages[currentNumber] = nextValue;
+                currentNumber++;
+                if (currentNumber == 8)
+                {
+                    break;
+                }
+            }
 
+            return negativeNumbersImages;
+        }
+
+        private void SetSourseImage(bool positivePicture, int imageNumberForm, int imageNumberFolder)
+        {
+            string formPath = "Image" + imageNumberForm.ToString();
+            string folderPath = "Resources" + ((positivePicture) ? "/Positive pictures/" : "/Negative pictures/") + "Image" + imageNumberFolder.ToString() + ".jpg";
+
+            ((Image)(Form.FindName(formPath))).Source = new BitmapImage(new Uri(folderPath, UriKind.Relative)) 
+            { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
+
+            //((Image)(Form.FindName("Image1"))).Source = new BitmapImage(new Uri(@"Resources\Image1.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
+            
+        }
+
+        private void SetImage()
+        {
+            positiveImageNumberForm = GetNumber(9);
+            int positiveImageNumberFolder = GetNumber(15);
+            SetSourseImage(true, positiveImageNumberForm, positiveImageNumberFolder);
+            int[] negativeNumbersImages = GetNegativeNumbersImages();
+
+            int currentNumber = 0;
+            for (int i = 1; i <= 9; i++)
+            {
+                if (i == positiveImageNumberForm)
+                {
+                    continue;
+                }
+
+                SetSourseImage(false, i, negativeNumbersImages[currentNumber]);
+                currentNumber++;
+            }
+
+            string formPath = "ButtonImage" + positiveImageNumberForm.ToString();
+            positiveButton = ((Button)(Form.FindName(formPath)));
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Image1.Source = new BitmapImage(new Uri(@"Resources\Image1.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image2.Source = new BitmapImage(new Uri("/Resources/Image2.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image3.Source = new BitmapImage(new Uri(@"Resources\Image3.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image4.Source = new BitmapImage(new Uri("Resources/Image4.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image5.Source = new BitmapImage(new Uri("Resources/Image5.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image6.Source = new BitmapImage(new Uri("/Resources/Image6.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image7.Source = new BitmapImage(new Uri("/Resources/Image7.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image8.Source = new BitmapImage(new Uri("/Resources/Image8.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-            Image9.Source = new BitmapImage(new Uri("/Resources/Image9.jpg", UriKind.Relative)) { CreateOptions = BitmapCreateOptions.IgnoreImageCache };
-
+            SetImage();
+            amountWindow++;
         }
 
         private void ButtonImage_Click(object sender, RoutedEventArgs e)
@@ -53,13 +115,21 @@ namespace ForAliceWpfApplication
 
             amountOfAttemps = amountOfAttemps + 1;
 
-            if (sender != ButtonImage8)
+            if (sender != positiveButton)
+            {
+                return;
+            }
+
+            amountWindow++;
+            SetImage();
+
+            if (amountWindow!=11)
             {
                 return;
             }
 
             PreliminaryResultWindow w1 = new PreliminaryResultWindow();
-            w1.Percent = 100 / amountOfAttemps;
+            w1.Percent = 100*10 / amountOfAttemps;
             w1.NextWindow = "WordsSearchDescriptionWindow";
             MainWindow _mainWindow = (MainWindow)Window.GetWindow(this);
             _mainWindow.Frame.Navigate(w1);

@@ -1,31 +1,62 @@
 ﻿<Page x:Class="ForAliceWpfApplication.IDescriptionWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Игра" Height="600" Width="825">
-    <Grid>
+        Height="Auto" Width="Auto" Background="#c9e7eb">
+    <Grid Margin="30,30,30,30">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" BorderThickness="5" BorderBrush="#FF5788C0" CornerRadius="65"></Border>
+        <Grid Grid.Column="0">
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="7*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" FontSize="44" Text = "Я" TextWrapping="Wrap" HorizontalAlignment="Center"/>
+            <TextBlock Grid.Row="0" FontSize="44" Text = "ОБО МНЕ" TextWrapping="Wrap" HorizontalAlignment="Center" Margin="35,15,35,0"/>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="5*"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock  Grid.Column="1" Grid.Row="0" FontSize="32" 
-                            Text="Заполните полностью все предложенные поля, ничего не пропуская." TextWrapping="Wrap" />
-            <Button x:Name="ButtonOnward" Grid.Column="1" Grid.Row="3" Content="Далее" FontSize="18" VerticalAlignment="Top" 
-                    HorizontalAlignment="Right" Click="ButtonOnward_Click" Padding="25,5" FontWeight="Bold"
-                    Background="#95b3d7" BorderBrush="#93cddd" Margin="0"/>
-        </Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Source="Resources\NumberOne.png" Margin="35,5,35,0"/>
+                <Image Grid.Column="1" Grid.Row="0" Source="Resources\NumberTwo.png" Margin="35,5,35,0"/>
+                <TextBlock  Grid.Column="0" Grid.Row="1" FontSize="18" Text="Заполните каждое поле, ничего не пропуская" 
+                                TextWrapping="Wrap" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock  Grid.Column="1" Grid.Row="1" FontSize="18" 
+                            Text="Как можно быстрее найдите информацию о себе в появляющихся экранах" 
+                                TextWrapping="Wrap" FontWeight="Bold" HorizontalAlignment="Center"/>
+            </Grid>
+            <TextBlock  Grid.Row="2" FontSize="16" FontWeight="Bold" Margin="35,15,35,15"
+                            Text="Самооценка зависит от множества факторов, один из которых одобрение и поддержка окружающих. Если мы их замечаем, то чувствуем себя более уверено, нам проще развивать свой потенциал и воплощать задуманное. Эта игра разработана для усиления связи образа «Я» с положительными стимулами, что благотворно сказывается на уверенности в себе." 
+                            TextWrapping="Wrap" />
 
+        </Grid>
+        <Button Grid.Column="1" Click="ButtonOnward_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Border x:Name="Border">
+                            <Border.Background>
+                                <RadialGradientBrush RadiusX="1" RadiusY="1">
+                                    <GradientStop Color="#c9e7eb" Offset="0"/>
+                                    <GradientStop Color="#c9e7eb" Offset="0.5"/>
+                                </RadialGradientBrush>
+                            </Border.Background>
+                        </Border>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                            <Image Source="Resources\ImageForward.png" Margin="0,0,0,0"/>
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>
