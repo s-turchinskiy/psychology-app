@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ForAliceWpfApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Игра" Height="630" Width="865" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch">    
+        Name ="Игра" Height="630" Width="865" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch">    
     <Frame Name ="Frame" NavigationUIVisibility="Hidden" Source="Window1.xaml" 
            HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
 </Window>
